@@ -1,0 +1,123 @@
+Query-
+
+query {
+  employees {
+    id
+    name
+    designation
+    previousCompanies {
+      companyName
+    }
+  }
+}
+
+Delete -
+
+mutation{
+  delete(deleteVM: { name:"TestName"})
+}
+
+Update-
+
+mutation {
+  update(
+    employee: {
+      id: "8e665cc8-07ba-41a3-84d7-eb483a36c10c"
+      previousCompanies: [
+        { companyName: "xyzCompany1" }
+        { companyName: "xyzCompany2" }
+      ]
+    }
+  ) {
+    id
+    name
+    designation
+    previousCompanies {
+      companyName
+    }
+  }
+}
+
+
+
+1)
+mutation {
+  create(
+    employee: {
+      name: "Jay krishna Reddy"
+      designation: "Full Stack Developer"
+      previousCompanies: [
+        { companyName: "xyzCompany1" }
+        { companyName: "xyzCompany2" }
+      ]
+    }
+  ) {
+    id
+    name
+    designation
+    previousCompanies {
+      companyName
+    }
+  }
+}
+
+
+2)
+
+mutation {
+  create(
+    employee: {
+      name: "JK"
+      designation: "SSE"
+    }
+  ) {
+    id
+    name
+    designation
+  }
+}
+
+3)
+
+mutation {
+  create(
+    employee: {
+      name: "Jay"
+      designation: "Software Engineer"
+    }
+  ) {
+    id
+    name
+    designation
+  }
+}
+
+4)
+
+mutation {
+  create(
+    employee: {
+      name: "krishna Reddy"
+      designation: "Database Developer"
+    }
+  ) {
+    id
+    name
+    designation
+  }
+}
+
+5)
+
+mutation {
+  create(
+    employee: {
+      name: "Reddy"
+      designation: "Cloud Engineer"
+    }
+  ) {
+    id
+    name
+    designation
+  }
+}
